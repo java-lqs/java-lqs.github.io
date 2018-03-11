@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我们</title>
+    <link type="text/css" rel="stylesheet" href="mypictrue.css">
+</head>
+<body>
+    <div class="top">
+        <div>我们毕业啦</div>
+    </div>
+    <div class="middle">
+        <div class="left">
+            <div class="tx">
+                <img src="myself.jpg"/>
+            </div>
+            <div class="tool">
+                <ul class="tool-menu">
+                    <li><a href="index.html">message</a></li>
+                    <li><a href="mypictrue.html">images</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <ul class="imgcontainer">
+                <li>
+                    <img src="IMG_0857.JPG">
+                </li>
+                <li>
+                    <img src="IMG_0856.JPG">
+                </li>
+                <li>
+                    <img src="IMG_0853.JPG">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottom both">
+        <div class="bottom-title">
+            罗
+        </div>
+    </div>
+    <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        var t;
+        var index = 1;
+        var imgitem = $(".imgcontainer").children.length;
+        $(function(){
+            var imgem = $(".imgcontainer > li");
+            t = setInterval(function(){
+                imgem.eq(index).fadeIn().siblings().fadeOut();
+                index++;
+                if(index>imgitem)
+                    index=0;
+            },3000);
+        });
+    </script>
+</body>
+</html>
